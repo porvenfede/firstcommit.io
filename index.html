@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Magnificarne - Inicio</title>
+    <link rel="shortcut icon" href="hamburguesa.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="page">
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header__logo">LA MAGNIFICARNE</div>
+
+        <button class="header__toggle" id="menuToggle">☰</button>
+
+        <nav class="nav" id="navMenu">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="paginas/inicio.html" class="nav__link">Presentación</a></li>
+                <li class="nav__item"><a href="paginas/ingredientes.html" class="nav__link">Ingredientes</a></li>
+                <li class="nav__item"><a href="paginas/nuevo-folio.html" class="nav__link">Siguiente Página</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1 class="hero__title">Más que una Hamburguesería</h1>
+        <p class="hero__text">Sabores premium creados para vos.</p>
+    </section>
+<main>
+    <main>
+<div class="carousel">
+    <div class="carousel-track">
+        <img src="./imagines/aderezos.jpg" alt="Aderezo">
+        <img src="./imagines/lechuga.jpg" alt="Lechuga">
+        <img src="./imagines/tomate.jpg" alt="Tomate">
+        <img src="./imagines/burger.png" alt="Hamburguesa">
+        <img src="./imagines/carne.jpg" alt="Carne">
+        <img src="./imagines/flex1.jpg" alt="Flex 1">
+        <img src="./imagines/flex2.jpg" alt="Flex 2">
+        <img src="./imagines/flex3.jpg" alt="Flex 3">
+        <img src="./imagines/pan.jpg" alt="Pan">
+    </div>
+</div>
+
+</main>
+</main>
+
+    <footer class="footer">
+        <p class="footer__text">© 2025 La Magnificarne</p>
+    </footer>
+
+<script>
+    const toggle = document.getElementById("menuToggle");
+    const menu = document.getElementById("navMenu");
+
+    toggle.addEventListener("click", () => {
+        menu.classList.toggle("nav--active");
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,195 @@
+/* ------------------------------
+   RESET BÁSICO
+--------------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body.page {
+    font-family: "Lora", serif;
+    background-color: #fff7e6; /* tono cálido tipo pan brioche */
+    color: #2b2b2b;
+}
+
+/* ------------------------------
+   HEADER
+--------------------------------*/
+.header {
+    background-color: #8b0000; /* rojo hamburguesería */
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.header__logo {
+    font-size: 1.4rem;
+    font-weight: bold;
+    font-family: "Poetsen One", sans-serif;
+}
+
+/* Botón menú móvil */
+.header__toggle {
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: none; /* visible solo en móvil */
+}
+
+/* ------------------------------
+   NAV
+--------------------------------*/
+.nav {
+    display: flex;
+}
+
+.nav__list {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav__link {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    transition: 0.2s;
+}
+
+.nav__link:hover {
+    color: #ffd27f; /* dorado pan tostado */
+}
+
+/* ------- NAV EN MÓVIL ------- */
+@media (max-width: 768px) {
+    .header__toggle {
+        display: block;
+    }
+
+    .nav {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #8b0000;
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        padding: 20px 0;
+    }
+
+    .nav__list {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .nav--active {
+        display: flex;
+    }
+}
+
+/* ------------------------------
+   HERO / PORTADA
+--------------------------------*/
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    background-image: url("../imagines/hamburguesa.jpg");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-shadow: 2px 2px 5px black;
+}
+
+.hero__title {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hero__text {
+    font-size: 1.2rem;
+}
+
+/* ------------------------------
+   CONTENIDO GENERAL
+--------------------------------*/
+.content {
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.content__title {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.content__text {
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+/* ------------------------------
+   FOOTER
+--------------------------------*/
+.footer {
+    margin-top: 40px;
+    background-color: #8b0000;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+.footer__text {
+    font-size: 0.9rem;
+}
+/* ---- CARRUSEL SIN JS ---- */
+.carousel {
+    width: 90%;
+    max-width: 700px;
+    height: 350px;
+    margin: 30px auto;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+}
+
+.carousel-track {
+    display: flex;
+    width: calc(100% * 9); /* 9 imágenes */
+    animation: slide 30s infinite;
+}
+
+.carousel-track img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+/* Animación automática */
+@keyframes slide {
+    0% { transform: translateX(0); }
+    10% { transform: translateX(0); }
+
+    20% { transform: translateX(-100%); }
+    30% { transform: translateX(-100%); }
+
+    40% { transform: translateX(-200%); }
+    50% { transform: translateX(-200%); }
+
+    60% { transform: translateX(-300%); }
+    70% { transform: translateX(-300%); }
+
+    80% { transform: translateX(-400%); }
+    90% { transform: translateX(-400%); }
+
+    100% { transform: translateX(0); }
+}
